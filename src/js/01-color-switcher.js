@@ -1,12 +1,11 @@
-const contentWrapper = document.querySelector('.content-wrapper');
-const startBtn = contentWrapper.querySelector('button[data-start]');
-const stopBtn = contentWrapper.querySelector('button[data-stop]');
+const startBtn = document.querySelector('button[data-start]')
+const stopBtn = document.querySelector('button[data-stop]')
+
 
 function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
+  return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, 0)}`;
 }
+
 let timerColor;
 startBtn.addEventListener('click', () => {
   timerColor = setInterval(() => {
